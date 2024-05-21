@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="Traffic-light-vertical">
+        <div class="red" [ngClass]="{'active': trafficLightData.color == 'red'}"></div>
+        <div class="yellow" [ngClass]="{'active': trafficLightData.color == 'yellow'}"></div>
+        <div class="green" [ngClass]="{'active': trafficLightData.color == 'green'}"></div>
+    </div>
+    <button (click)="processCrossVertical()" [disabled]="trafficLightData.color == 'red' || trafficLightData.accident == true">Cross</button>
+</div>

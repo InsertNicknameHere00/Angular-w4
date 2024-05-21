@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="Traffic-light-horizontal">
+        <div class="red" [ngClass]="{'active': trafficLightData.color1 == 'red'}"></div>
+        <div class="yellow" [ngClass]="{'active': trafficLightData.color1 == 'yellow'}"></div>
+        <div class="green" [ngClass]="{'active': trafficLightData.color1 == 'green'}"></div>
+    </div>
+    <button (click)="processCrossHorizontal()" [disabled]="trafficLightData.color1 == 'red' || trafficLightData.accident == true">Cross</button>
+</div>
